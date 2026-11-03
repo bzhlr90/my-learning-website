@@ -1,0 +1,46 @@
+:root { --bg:#fafaf7; --fg:#222; --muted:#777; --accent:#1f5f8b; --card:#fff; --line:#e3e3dc; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#17191c; --fg:#e8e8e8; --muted:#999; --accent:#6db3e0; --card:#1f2226; --line:#33373c; }
+}
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:18px/1.7 "Assistant","Segoe UI",Arial,sans-serif; }
+header { background:var(--accent); padding:14px 20px; }
+header a { color:#fff; text-decoration:none; font-size:1.3rem; font-weight:700; }
+main { max-width:780px; margin:0 auto; padding:24px 16px 60px; }
+a { color:var(--accent); }
+input[type=search] { width:100%; padding:12px 14px; font-size:1rem; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); margin-bottom:20px; }
+h1 { margin:8px 0 18px; }
+.crumbs { margin:0 0 14px; color:var(--muted); font-size:.95rem; }
+.crumbs a { text-decoration:none; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; }
+.card { display:flex; flex-direction:column; gap:4px; padding:20px 18px; border-radius:12px; text-decoration:none;
+  color:var(--fg); background:var(--card); border:1px solid var(--line); border-top:5px solid hsl(var(--h) 55% 50%);
+  transition:transform .12s, box-shadow .12s; }
+.card:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,.12); }
+.card strong { font-size:1.25rem; }
+.card span { color:var(--muted); font-size:.9rem; }
+.subject-head { display:flex; align-items:baseline; gap:14px; padding:6px 18px 4px; margin-bottom:16px;
+  border-right:6px solid hsl(var(--h) 55% 50%); }
+.subject-head h1 { margin:0; }
+.subject-head span { color:var(--muted); }
+.lessons li { display:flex; align-items:center; gap:12px; background:var(--card); border:1px solid var(--line);
+  border-radius:10px; padding:12px 16px; margin-bottom:8px; }
+.lessons li:first-child { border-top:1px solid var(--line); }
+.lessons .title { flex:1; text-decoration:none; font-weight:600; }
+.lessons .title:hover { text-decoration:underline; }
+.lessons .date { color:var(--muted); font-size:.85rem; white-space:nowrap; }
+.btn { font-size:.85rem; text-decoration:none; padding:4px 12px; border:1px solid var(--accent); border-radius:999px; white-space:nowrap; }
+.btn:hover { background:var(--accent); color:#fff; }
+@media (max-width:520px) { .lessons li { flex-wrap:wrap; } .lessons .title { flex-basis:100%; } }
+section { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:4px 20px 12px; margin-bottom:18px; }
+h2 { margin:14px 0 6px; }
+ul { list-style:none; padding:0; margin:0; }
+li { padding:8px 0; border-top:1px solid var(--line); }
+li:first-child { border-top:0; }
+.date { color:var(--muted); font-size:.85rem; margin-inline-start:8px; }
+.dl { font-size:.85rem; margin-inline-start:8px; }
+article { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px 24px 24px; overflow-x:auto; }
+article img { max-width:100%; height:auto; }
+article table { border-collapse:collapse; width:100%; }
+article td, article th { border:1px solid var(--line); padding:6px 10px; }
+.back { margin:0 0 12px; }
